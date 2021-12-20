@@ -1,0 +1,126 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(
+        204deg,
+        blueviolet,
+        rgb(194, 221, 41)
+    );
+ 
+}
+
+h1 {
+    text-align: center;
+    font-style: italic;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    min-width: 550px;
+    padding: 30px 40px;
+    margin: 0px auto;
+}
+
+ .btn-div {
+    margin: 10px;
+    width: 50px;
+} 
+
+.btn-1 {
+    padding: 7px 10px;
+    position: absolute;
+    top: 81px;
+    border-radius: 5px;
+    background-color: #F1F72A;
+    transition: all 0.5s ease-out;
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+   
+}
+
+.btn-1:active {
+    padding: 12px 15px;
+    margin: 10px;
+}
+
+.btn-1:hover {
+   background-color: #56E072;
+   cursor: pointer;
+  }
+
+.todo_input {
+    width: 100%;
+    min-width: 350px;
+    height: 40px;
+    border: 2px solid slateblue;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0px 2px;
+}
+
+
+
+.task {
+    font-size: 1.2rem;
+}
+
+
+.case {
+    display: flex;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: #7070FF;
+    background-color: black; 
+    justify-content: space-between;
+    padding: 5px 2px;
+    min-width: 350px;
+    margin: 10px 0px;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-family:'Poppins', sans-serif;
+}
+
+.case-active {
+    text-decoration: line-through;
+    text-decoration-color: white;
+
+}
+
+.btn {
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    user-select:none;
+    background-image: url('../img/premium-icon-cancel-4467511.png');
+    background-repeat: no-repeat;
+    padding: 10px 12px;
+    background-position: center;
+    background-color: blanchedalmond;
+}
+
+@media screen and (min-width: 320px) and (max-width: 920px) {
+    .wrapper {
+        width: 100%;
+    }
+    .task {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px;
+    }
+}
