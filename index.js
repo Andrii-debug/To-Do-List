@@ -11,6 +11,17 @@ button.addEventListener('click', function addTask() {
     }
 })
 
+input.addEventListener('keypress', function pressEnter(e) {
+    if (e.key === 'Enter') {
+        if (input.value === '') {
+            alert('Write a task')
+        } else {     
+            createEl()
+            input.value = ''
+        }
+    }
+});
+
 
 function createEl() {
     let li = document.createElement('li')
