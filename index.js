@@ -4,8 +4,6 @@ const task = document.querySelector('.task')
 const btnSave = document.querySelector('.btn__save')
 const ClearBtn = document.querySelector('.btn__clear')
 
-
-
 function loadTodos() {
     const data = localStorage.getItem('task')
     if (data) {
@@ -49,8 +47,6 @@ window.addEventListener('load', loadTodos)
 
 ///////////////////////////////////////////////
 
-
-
 function createEl() {
     
     let li = document.createElement('li')
@@ -63,18 +59,11 @@ function createEl() {
      b1.className = 'btn';
      b1.innerHTML = '';
 
-
-    function removes(){
-        localStorage.removeItem('task')
-        task.removeChild(li)
-      }
-
     task.appendChild(li);
     li.appendChild(b1);
      
 
      b1.addEventListener('click', () => {
-      removes()
         task.removeChild(li)
          
      })
@@ -83,9 +72,6 @@ function createEl() {
         li.classList.toggle('case-active')
        
      })
-
-
-
 
 }
 
