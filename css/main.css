@@ -10,9 +10,6 @@ body {
     height: 100vh;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(
-        /* 204deg, */
-        /* blueviolet,
-        rgb(194, 221, 41) */
         to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);
  
 }
@@ -33,10 +30,13 @@ h1 {
 
  .btn-div {
     margin: 10px;
-    width: 50px;
+    width: 70px;
+    height: 150px;
 } 
 
-.btn-1 {
+.btn-add, 
+.btn-clear {
+    width: 60px;
     padding: 7px 10px;
     position: absolute;
     top: 81px;
@@ -45,16 +45,24 @@ h1 {
     transition: all 0.5s ease-out;
     font-weight: 600;
     font-family: 'Rubik', sans-serif;
-   
+    margin: 0px 8px;
 }
 
-.btn-1:active {
-    padding: 12px 15px;
-    margin: 10px;
+.btn-clear {
+    position: relative;
+    top: 35px;
+    background-color: red;
 }
 
-.btn-1:hover {
-   background-color: #56E072;
+.btn-add:active,
+.btn-clear:active {
+    padding: 10px 14px;
+    margin: 5px;
+}
+
+.btn-add:hover,  
+.btn-clear:hover {
+   background-color: #4fce35cb;
    cursor: pointer;
   }
 
@@ -71,12 +79,9 @@ h1 {
     padding: 0px 2px;
 }
 
-
-
 .task {
     font-size: 1.2rem;
 }
-
 
 .case {
     display: flex;
@@ -93,8 +98,6 @@ h1 {
     font-weight: 400;
     font-family:'Poppins', sans-serif;
 }
-
-
 
 .case-active {
     text-decoration: line-through;
@@ -113,7 +116,6 @@ h1 {
     background-position: center;
     background-color: blanchedalmond;
 }
-
 
 
 
