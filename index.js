@@ -26,23 +26,21 @@ function loadTodos() {
         task.appendChild(li);
         li.appendChild(b1);
 
-        tasks.push(render); // тут вставили очередной элемент
-        let task_index = tasks.length - 1; // узнаем его индекс по длине массива, так как он в текущей ситуации последний
-        // несколько строк спустя
-        b1.addEventListener("click",  (function(inner_task_index)  { // функция-обертка для изоляции контекста, сюда передается значение task_index, я специально выделил его другим именем inner_task_index, чтобы видеть контекст функции-обертки
+        tasks.push(render); 
+        let task_index = tasks.length - 1;
+      
+        b1.addEventListener("click",  (function(inner_task_index)  { 
     
-        // обертка возвращает функцию-обработчик события  для addEventListener
         return function delFromLocalSt() {
             task.removeChild(li);
                 let array = JSON.parse(localStorage.getItem('task'));
-                array.splice(inner_task_index, 1); // удаляем элемент по известному индексу используя механизм замыкания, используя контекст функции обертки
+                array.splice(inner_task_index, 1); 
             localStorage.setItem('task', JSON.stringify(array));
             location.reload()
            }
           
         })
-        (task_index) // вызываем хитрую обертку, чтобы обеспечить изоляцию переменной от контекста функции createEl
-        
+        (task_index) 
         );
 
        
@@ -102,21 +100,20 @@ function createEl(data) {
   task.appendChild(li);
   li.appendChild(b1);
 
-    tasks.push(data); // тут вставили очередной элемент
-    let task_index = tasks.length - 1; // узнаем его индекс по длине массива, так как он в текущей ситуации последний
-    // несколько строк спустя
-    b1.addEventListener("click",  (function(inner_task_index)  { // функция-обертка для изоляции контекста, сюда передается значение task_index, я специально выделил его другим именем inner_task_index, чтобы видеть контекст функции-обертки
-
-    // обертка возвращает функцию-обработчик события  для addEventListener
+    tasks.push(data); 
+    let task_index = tasks.length - 1; 
+  
+    b1.addEventListener("click",  (function(inner_task_index)  { 
+ 
     return function delFromLocalSt() {
         task.removeChild(li);
             let array = JSON.parse(localStorage.getItem('task'));
-            array.splice(inner_task_index, 1); // удаляем элемент по известному индексу используя механизм замыкания, используя контекст функции обертки
+            array.splice(inner_task_index, 1); 
         localStorage.setItem('task', JSON.stringify(array));
-        // location.reload()
+        location.reload()
        }
     })
-    (task_index) // вызываем хитрую обертку, чтобы обеспечить изоляцию переменной от контекста функции createEl
+    (task_index) 
     
     );
 
@@ -127,3 +124,6 @@ function createEl(data) {
 }
 
 loadTodos()
+
+
+// я знаю что это ужас. но пока я ищу лучшее решение, будет так.
