@@ -11,7 +11,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(
         to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);
- 
+  
 }
 
 h1 {
@@ -23,7 +23,6 @@ h1 {
     display: flex;
     justify-content: center;
     width: 70%;
-    min-width: 550px;
     padding: 30px 40px;
     margin: 0px auto;
 }
@@ -132,3 +131,29 @@ h1 {
     }
 }
 
+
+@media screen and (min-width: 280px) and (max-width: 556px) {
+    body {
+        width: 100%;
+        background: rgb(15, 147, 187);
+        overflow-x: hidden;
+    }
+    .todo_input {
+       min-width: 250px;
+    }
+    .btn-add {
+        width: 40px;
+        text-align: center;
+        padding: 4px 5px;
+    }
+
+    .btn-clear {
+        width: 45px;
+        padding: 3px 0px;
+    }
+
+    .case {
+        min-width: 200px;
+    }
+
+}
